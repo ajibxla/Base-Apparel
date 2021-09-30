@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Desaturated-red: hsl(0, 36%, 70%);
+  --Soft-red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Linear: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --Linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --font: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-image: var(--Linear);
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--font);
+  /* overflow: hidden; */
+}
+
+main {
+  height: 100%;
+  width: 100vw;
+}
+
+.logo {
+  height: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.img-div {
+  height: 15rem;
+}
+
+.main-img {
+  background-image: url("./images/hero-mobile.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.main-section {
+  padding-top: 60px;
+  width: 19rem;
+  margin: auto;
+}
+
+.heading {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 7px;
+  color: var(--Desaturated-red);
+  font-weight: 200;
+}
+
+.heading span {
+  color: var(--Dark-Grayish-Red);
+  font-weight: 600;
+}
+
+.main-text p {
+  color: var(--Desaturated-red);
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+form {
+  width: 19rem;
+  height: 3rem;
+  margin: auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid hsl(0, 36%, 70%);
+
+  padding-left: 20px;
+  opacity: 0.4;
+  font-family: var(--font);
+}
+
+input.delete {
+  border: 2px solid red;
+}
+
+button {
+  height: 100%;
+  width: 4rem;
+  position: absolute;
+  left: 240px;
+  border-radius: 30px;
+  border: none;
+  background-image: url("./images/icon-arrow.svg"), var(--Linear2);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button::before {
+  content: url("./images/icon-error.svg");
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 5rem;
+}
+
+button.delete::before {
+  content: none !important;
+  display: none;
+}
+
+.error-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: var(--font);
+}
+
+.error-text.delete {
+  display: none;
+}
+
+.attribution {
+  margin-top: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 90%;
+  }
+
+  .logo-case {
+    grid: 1/1;
+    margin-top: 2rem;
+  }
+
+  .logo {
+    height: 30px;
+    margin-left: 90px;
+  }
+  .img-div {
+    grid: 2/3;
+    height: 100vh;
+  }
+
+  .main-img {
+    background-image: url("./images/hero-desktop.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .main-section {
+    margin: 0;
+    margin-left: 90px;
+    margin-top: 10px;
+    text-align: left;
+    width: 28rem;
+  }
+
+  .heading h1 {
+    text-align: left;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+  }
+
+  .main-text p {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    width: 20rem;
+  }
+
+  form {
+    width: 20rem;
+    margin: 0;
+  }
+
+  button {
+    width: 6rem;
+    left: 225px;
+    box-shadow: 5px 10px 20px hsl(0, 36%, 70%);
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    left: 10rem;
+  }
+
+  button::before {
+    right: 7rem;
+  }
+}
+
+@media screen and (min-width: 925px) {
+  .main-section {
+    margin-top: 20px;
+  }
+  .main-text p {
+    width: 27rem;
+  }
+
+  form {
+    width: 25rem;
+  }
+
+  button {
+    left: 310px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-section {
+    margin-top: 20px;
+  }
+  .main-text p {
+    width: 35rem;
+  }
+
+  form {
+    width: 35rem;
+  }
+
+  button {
+    left: 500px;
+  }
+
+  button::before {
+    right: 10rem;
+  }
+
+  .heading h1 {
+    text-align: left;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+}
