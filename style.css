@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Desaturated-red: hsl(0, 36%, 70%);
+  --Soft-red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Linear: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --Linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --font: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-image: var(--Linear);
+  max-height: 100%;
+  width: 100vw;
+  overflow: none;
+}
+
+.logo {
+  padding-left: 2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 2rem;
+  height: 9vh;
+}
+
+.main {
+  height: 91vh;
+}
+.main-img {
+  background-image: url(./base-apparel-coming-soon-master/images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  height: 15rem;
+  width: 100vw;
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+
+.main-body {
+  background-color: var(--Linear);
+  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  font-family: var(--font);
+}
+
+.heading {
+  font-size: 5vw;
+  font-weight: 200;
+  line-height: 2.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--Desaturated-red);
+  padding-bottom: 1rem;
+}
+
+.heading span {
+  font-weight: 600;
+  color: var(--Dark-Grayish-Red);
+}
+
+.paragraph {
+  font-size: 14px;
+  color: var(--Desaturated-red);
+  font-weight: 400;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.submit {
+  position: relative;
+}
+
+.input {
+  width: 90vw;
+  height: 2.5rem;
+  outline: none;
+  border-radius: 20px;
+  border: solid 1.5px hsl(0, 36%, 70%);
+  background-color: transparent;
+  padding: 1rem 1rem;
+  margin: auto;
+  font-family: var(--font);
+  color: var(--Dark-Grayish-Red);
+  opacity: 0.3;
+}
+
+form {
+  display: flex;
+  width: 60vw;
+  margin: auto;
+  position: relative;
+}
+
+.input-submit {
+  width: 5rem;
+  height: 2.5rem;
+  background-image: var(--Linear2);
+  border: none;
+  outline: none;
+  border-radius: 1.2rem;
+  position: fixed;
+  left: 15rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    position: relative;
+  }
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .logo {
+    padding-top: 3rem;
+    padding-left: 10rem;
+  }
+
+  .main-img {
+    background-image: url(./base-apparel-coming-soon-master/images/hero-desktop.jpg);
+    width: 40%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+  }
+
+  .main-body {
+    width: 60vw;
+    position: absolute;
+    left: 0;
+    padding-left: 10rem;
+    padding-top: 5rem;
+  }
+
+  .main-body {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+  }
+
+  .heading {
+    width: 20vw;
+    line-height: 3rem;
+    font-size: 3vw;
+    letter-spacing: 0.7rem;
+  }
+
+  .paragraph {
+    max-width: 28vw;
+  }
+
+  form {
+    display: flex;
+    width: 25rem;
+    margin: 0;
+  }
+}
